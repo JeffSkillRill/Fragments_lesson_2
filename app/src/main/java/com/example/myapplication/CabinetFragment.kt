@@ -32,11 +32,10 @@ class CabinetFragment : Fragment() {
 
         val names = binding.name.text
         val password = binding.password.text
-        val t = parentFragmentManager.beginTransaction()
-
+        val user = User(names.toString(), password.toString())
         binding.enter.setOnClickListener{
             parentFragmentManager.beginTransaction()
-                .replace(R.id.profile_main, MyOrderFragment.newInstance(names.toString(), password.toString()))
+                .replace(R.id.profile_main, MyOrderFragment.newInstance(user))
                 .commit()
         }
 
