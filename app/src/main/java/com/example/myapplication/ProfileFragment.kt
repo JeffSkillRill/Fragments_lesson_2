@@ -18,7 +18,7 @@ class ProfileFragment : Fragment() {
     ): View? {
         val binding = FragmentProfileBinding.inflate(inflater, container, false)
         parentFragmentManager.beginTransaction()
-            .add(R.id.profile_main, MyOrderFragment())
+            .add(R.id.profile_main, CabinetFragment())
             .commit()
 
         binding.order.setOnClickListener{
