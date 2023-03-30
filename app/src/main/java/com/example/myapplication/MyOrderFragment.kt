@@ -33,7 +33,7 @@ class MyOrderFragment : Fragment() {
 
 
 
-        binding.user.text = param1?.nams
+        binding.user.text = param1?.nams + " " + param1?.password
         return binding.root
     }
 
